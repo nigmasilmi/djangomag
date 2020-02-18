@@ -1,0 +1,67 @@
+{% load static %}
+{% block head %}
+{% include 'pages/head.html' %}
+{% endblock %}
+
+<body>
+
+    {% block header %}
+    {% include 'pages/header.html' %}
+    {% endblock %}
+    <div class="site-main-container">
+        {% block own %}
+        {% endblock %}
+        <div class="container no-padding">
+            <div class="row">
+                <div class="col-lg-8 post-list">
+
+                    {% block latestNews %}
+                    {% include 'pages/latestNews.html' %}
+                    {% endblock %}
+                    {% block relevantStories %}
+                    {% include 'pages/relevantStories.html' %}
+                    {% endblock %}
+                    <!-- Start banner-ads Area -->
+                    {% for p in publi %}
+                    {% if forloop.counter0 == 0 %}
+                    <div class="col-lg-12 ad-widget-wrap mt-30 mb-30">
+                        <img class="img-fluid" src="{{p.ad_728por90.url}}" alt="{{p.client}}">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- End banner-ads Area -->
+                <div class="col-lg-4">
+                    <div class="sidebars-area">
+                        {% block editorsPick %}
+                        {% include 'pages/editorsPick.html' %}
+                        {% endblock %}
+                        {% for p in publi %}
+                        {% if forloop.counter0 == 1 %}
+                        <div class="single-sidebar-widget ads-widget">
+                            <img class="img-fluid" src="{{p.ad_300por250.url}}" alt="{{p.client}}">
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% block newsLetter %}
+                        {% include 'pages/newsLetter.html' %}
+                        {% endblock %}
+                        {% block mostPopular %}
+                        {% include 'pages/mostPopular.html' %}
+                        {% endblock %}
+                        {% block socialNetworks %}
+                        {% include 'pages/socialNetworks.html' %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block footer %}
+    {% include 'pages/footer.html' %}
+    {% endblock %}
+
+</body>

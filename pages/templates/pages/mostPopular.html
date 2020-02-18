@@ -1,0 +1,22 @@
+{% load static %}
+<div class="single-sidebar-widget most-popular-widget">
+    <h6 class="title">Most Popular</h6>
+    {% for article in news %}
+    <div class="single-list flex-row d-flex">
+        <div class="thumb">
+            <img src="{{article.image.url}}" alt="">
+        </div>
+        <div class="details">
+            <a href="image-post.html">
+                <h6>Help Finding Information
+                    Online is so easy</h6>
+            </a>
+            <ul class="meta">
+                <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{ article.created_at }}</a></li>
+                <li><a href="#"><span class="lnr lnr-bubble"></span>06</a></li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
