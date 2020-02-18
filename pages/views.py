@@ -14,8 +14,9 @@ def home(request):
 
 def archive(request):
     template_path = 'pages/archive.html'
-    news_qs = News.objects().all
-    context = {'news': news_qs}
+    news_qs = News.objects.all()
+    pub_qs = Publicidad.objects.all()
+    context = {'news': news_qs, 'publi': pub_qs}
     return render(request, template_path, context)
 
 
