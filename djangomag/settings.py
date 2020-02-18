@@ -25,7 +25,7 @@ SECRET_KEY = '$pmt6^yt5t9(uf#1mdmtosp^&pgz1l*47#ha8f2k*$mua=l3@z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'noticiasmachete.herokuapp.com']
 
 
 # Application definition
