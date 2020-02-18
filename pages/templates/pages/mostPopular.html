@@ -7,9 +7,8 @@
             <img src="{{article.image.url}}" alt="">
         </div>
         <div class="details">
-            <a href="image-post.html">
-                <h6>Help Finding Information
-                    Online is so easy</h6>
+            <a href="{% url 'noticia' article.id %}">
+                <h6>Punchline</h6>
             </a>
             <ul class="meta">
                 <li><a href="#"><span class="lnr lnr-calendar-full"></span>{{ article.created_at }}</a></li>

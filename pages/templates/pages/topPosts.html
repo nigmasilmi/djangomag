@@ -16,7 +16,7 @@
                     <ul class="tags">
                         <li><a href="#">{{article.categoria}}</a></li>
                     </ul>
-                    <a href="image-post.html">
+                    <a href="{% url 'noticia' article.id %}">
                         <h3>{{article.title}}.</h3>
                     </a>
                     <ul class="meta">
@@ -38,7 +38,7 @@
                         <ul class="tags">
                             <li><a href="#">{{ article.categoria }}</a></li>
                         </ul>
-                        <a href="image-post.html">
+                        <a href="{% url 'noticia' article.id %}">
                             <h4>Punch headline para el artículo</h4>
                         </a>
                         <ul class="meta">
@@ -58,7 +58,7 @@
                         <ul class="tags">
                             <li><a href="#">{{ article.categoria }}</a></li>
                         </ul>
-                        <a href="image-post.html">
+                        <a href="{% url 'noticia' article.id %}">
                             <h4>Punchline para el artículo</h4>
                         </a>
                         <ul class="meta">
